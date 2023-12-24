@@ -1,5 +1,6 @@
 {
   "name": "Rakesh",
+  "homepage": "http://Rakesh2908.github.io/my-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,6 +19,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeply": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -41,5 +44,8 @@
     ]
   },
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
 }
