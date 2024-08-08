@@ -14,12 +14,12 @@ const Home = () => {
           I'm a Final Year Student @IIIT Allhabad.
         </h2>
         <p className='text-[#8892b0] py-4 max-w-[700px]'>
-        My skills include proficiency in languages such as C, C++, Python, JavaScript, and HTML/CSS. 
+        My skills include proficiency in languages such as C, C++, Python, JavaScript, MySQL and HTML/CSS. 
         I am experienced in using developer tools like Linux, VS Code, and Sublime 
         Text. Additionally, I am well-versed in various technologies and frameworks, including GitHub, 
-        React.js, Node.js, Express.js, MongoDB, Mongoose, EJS, Bootstrap, and Tailwind CSS. 
-        My capabilities extend to solving over 430+ problems on Leetcode, 190+ on Coding Ninjas, 
-        100+ on InterviewBit, and 280+ on GeeksForGeeks.
+        React.js, Node.js, Express.js, MongoDB, Mongoose, Bootstrap, and Tailwind CSS. 
+        I have a Codeforces rating of 1603 (Expert), a Leetcode rating of 1879 (Knight), and a Codechef rating of 1624 (3 star). 
+          I have also achieved significant rankings in competitive programming contests, demonstrating my dedication and proficiency in coding.
         </p>
         <div>
           <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'>
