@@ -17,7 +17,7 @@ const About = () => {
               <p>Hi. I'm Rakesh Reddy, nice to meet you. Please take a look around.</p>
             </div>
             <div>
-              <p>I am currently pursuing 3rd Year in Electronics and Communication Engineering at the Indian Institute of 
+              <p>I am currently a Senior in Electronics and Communication Engineering at the Indian Institute of 
                 Information Technology, Allahabad.  My skills include proficiency in C, C++, Python, JavaScript, 
                 and HTML/CSS, and I am experienced in using developer tools like Linux, Visual Studio Code (VS Code), 
                 and Sublime Text. I specialize in building exceptional digital experiences through full-stack web 
