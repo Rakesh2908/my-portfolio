@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 0 0% 100%;
+  --fg: 222 47% 11%;
+
+  --card: 0 0% 100%;
+  --card-fg: 222 47% 11%;
+
+  --muted: 210 40% 96%;
+  --muted-fg: 215 16% 47%;
+
+  --border: 214 32% 91%;
+
+  --primary: 222 47% 11%;
+  --primary-fg: 210 40% 98%;
+
+  --ring: 222 47% 11%;
+
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 10px;
+}
+
+.dark {
+  --bg: 222 47% 4%;
+  --fg: 210 40% 98%;
+
+  --card: 222 47% 7%;
+  --card-fg: 210 40% 98%;
+
+  --muted: 217 33% 12%;
+  --muted-fg: 215 20% 70%;
+
+  --border: 217 33% 18%;
+
+  --primary: 210 40% 98%;
+  --primary-fg: 222 47% 4%;
+
+  --ring: 213 27% 84%;
+}
+
+@layer base {
+  html {
+    text-rendering: geometricPrecision;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg text-fg antialiased font-sans;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.18);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 500ms ease, transform 650ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.reveal[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Hero background orbs – slow float */
+@keyframes float-orb {
+  0%, 100% {
+    transform: translate(-50%, 0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-50%, -8%) scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes float-orb-secondary {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(4%, -6%) scale(1.08);
+    opacity: 0.65;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-float-orb {
+    animation: float-orb 12s ease-in-out infinite;
+  }
+  .animate-float-orb-secondary {
+    animation: float-orb-secondary 14s ease-in-out infinite;
+  }
+}
+
+/* Card hover – lift + subtle glow */
+.card-hover {
+  transition:
+    transform 280ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 280ms ease,
+    border-color 200ms ease;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 4px 0 0 hsl(var(--border) / 0.9),
+      0 20px 40px -16px hsl(0 0% 0% / 0.35);
+  }
+}
+
+/* Link hover – underline slide */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 220ms ease;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .link-underline:hover::after {
+    width: 100%;
+  }
+}
+
+/* Button hover – subtle scale */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .btn-hover-scale:hover {
+    transform: scale(1.02);
+  }
+  .btn-hover-scale:active {
+    transform: scale(0.98);
+  }
+}
+
+.btn-hover-scale {
+  transition: transform 180ms ease;
+}
+

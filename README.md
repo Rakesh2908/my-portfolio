@@ -1,71 +1,64 @@
-# Getting Started with Create React App
+# Rakesh Garlapati — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Modern, backend-focused engineering portfolio built with **Vite + React + TypeScript + Tailwind** and deployed to **GitHub Pages**.
 
-## Available Scripts
+## Local development
 
-In the project directory, you can run:
+Install dependencies:
 
-### `yarn start`
+```bash
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Run the dev server:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm run dev
+```
 
-### `yarn test`
+Build for production:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm run build
+```
 
-### `yarn build`
+Preview the production build locally:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm run preview
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment (GitHub Pages)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This repo deploys `dist/` to GitHub Pages using `gh-pages`:
 
-### `yarn eject`
+```bash
+npm run deploy
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Base path
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+GitHub Pages serves this site under `/my-portfolio/`, so Vite is configured with:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `vite.config.ts`: `base: "/my-portfolio/"`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+If you **rename the repo**, update that `base` value accordingly.
 
-## Learn More
+## Editing content (no JSX hunting)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Most content is data-driven and lives in:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `src/content/experience.ts`
+- `src/content/projects.ts`
+- `src/content/skills.ts`
+- `src/content/highlights.ts`
+- `src/content/links.ts`
 
-### Code Splitting
+## Architecture overview
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `src/app/`: app-level wiring (theme provider, `App.tsx`)
+- `src/components/ui/`: reusable UI primitives (Button, Card, Tag, SectionHeading, Reveal)
+- `src/components/layout/`: layout components (header, footer, section wrapper)
+- `src/sections/`: page sections (Hero, About, Experience, Projects, Skills, Contact)
+- `src/styles/`: global styles and design tokens
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# my-portfolio" 

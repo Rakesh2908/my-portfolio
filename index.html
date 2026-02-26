@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <meta
+      name="description"
+      content="Backend-focused Software Development Engineer (SDE-1) building scalable services with a reliability and systems mindset."
+    />
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="canonical" href="https://rakesh2908.github.io/my-portfolio/" />
+
+    <meta property="og:title" content="Rakesh Garlapati — Backend Engineer" />
+    <meta
+      property="og:description"
+      content="Backend-focused SDE-1 building scalable services with a reliability and systems mindset."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rakesh2908.github.io/my-portfolio/" />
+    <meta property="og:image" content="https://rakesh2908.github.io/my-portfolio/og.svg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rakesh Garlapati — Backend Engineer" />
+    <meta
+      name="twitter:description"
+      content="Backend-focused SDE-1 building scalable services with a reliability and systems mindset."
+    />
+    <meta name="twitter:image" content="https://rakesh2908.github.io/my-portfolio/og.svg" />
+    <title>Rakesh Garlapati — Backend Engineer</title>
+
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem("theme");
+          const theme = stored === "light" || stored === "dark" ? stored : "dark";
+          document.documentElement.classList.toggle("dark", theme === "dark");
+        } catch {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
